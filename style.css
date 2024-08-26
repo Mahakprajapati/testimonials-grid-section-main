@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgb(237, 242, 248);
+}
+
+.container {
+  display: grid;
+  gap: 1em;
+  max-width: 375px;
+  margin-block: 4em;
+  font-family: "Barlow Semi Condensed",sans-serif;
+}
+.container p {
+  margin-top: 0.5em;
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 0.1em solid rgba(253, 251, 253, 0.455);
+  margin-right: 1em;
+}
+.patrick img {
+  border: 0.1em solid rgba(115, 63, 200, 0.466);
+}
+.image {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  border-radius: 0.5em;
+  padding: 1.5em;
+  color: #fff;
+  margin-inline: 2em;
+}
+.box h3 {
+  margin-block: 1em;
+  font-weight: 500;
+    font-size: 1.05em;
+}
+.first {
+  background-color: rgb(115, 63, 200);
+}
+.second {
+  background-color: rgb(73, 85, 107);
+}
+.third {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+.forth {
+  background-color: rgb(24, 32, 46);
+}
+.fifth {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: unset;
+    margin-inline: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 947px;
+  }
+  .box {
+    margin: 0;
+  }
+  .first {
+    grid-column-start: span 2;
+    order: -3;
+  }
+  .second {
+    order: -3;
+  }
+  .third {
+    grid-row-start: span 2;
+    order: -2;
+  }
+  .forth {
+    grid-column-start: span 2;
+    order: -2;
+  }
+  .fifth {
+    grid-row-start: span 2;
+    order: -3;
+  }
+}
